@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start!</title>
     <style>
-        /* 1. Kleur Variabelen */
         :root {
             --bg-color: #ffffff;
             --text-color: #202124;
             --search-bg: #f1f3f4;
             --hover-color: rgba(60, 64, 67, 0.1);
             --accent: #1a73e8;
+            --circle-bg: rgba(0, 0, 0, 0.05);
         }
 
-        /* 2. Dark Mode Instellingen */
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-color: #202124;
@@ -22,6 +21,7 @@
                 --search-bg: #303134;
                 --hover-color: rgba(255, 255, 255, 0.1);
                 --accent: #8ab4f8;
+                --circle-bg: rgba(255, 255, 255, 0.08);
             }
         }
 
@@ -37,7 +37,6 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Zoekbalk zoals Chrome */
         .search-form {
             width: 100%;
             max-width: 584px;
@@ -55,37 +54,22 @@
             color: var(--text-color);
             outline: none;
             box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-            transition: box-shadow 0.2s;
         }
 
-        .search-input:focus {
-            box-shadow: 0 1px 8px rgba(0,0,0,0.2);
-            background: var(--bg-color);
-            border: 1px solid #dfe1e5;
-        }
-
-        /* Container voor 12 iconen breed */
         .container {
             width: 100%;
-            max-width: 1344px; /* 12 * 112px */
+            max-width: 1344px; 
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .category-section {
             width: 100%;
             margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
         }
 
-        /* De Grid met auto-fit voor perfecte centrering */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, 112px);
-            gap: 0px;
             justify-content: center;
             width: 100%;
         }
@@ -106,29 +90,26 @@
             background-color: var(--hover-color);
         }
 
-        /* Icoon Container - Geen witte achtergrond meer */
         .icon-container {
             width: 48px;
             height: 48px;
-            /* Gebruik een transparante kleur die aanpast aan het thema */
-            background-color: var(--hover-color); 
+            background-color: var(--circle-bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 12px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .shortcut:hover .icon-container {
-            transform: translateY(-2px); /* Subtiel effect bij hover */
+            transform: scale(1.05);
         }
 
         .icon-container img {
-            width: 36px; /* Iets groter nu de cirkel weg is */
-            height: 36px;
+            width: 24px;
+            height: 24px;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
         .label {
@@ -164,14 +145,15 @@
                     grid.className = 'grid';
 
                     links.forEach(link => {
-                        const domain = new URL(link.url).hostname;
+                        const urlObj = new URL(link.url);
+                        const domain = urlObj.hostname;
+                        
+                        // Hier gebeurt de 'optionele' check:
+                        const iconSrc = link.icon ? link.icon : `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+                        
                         const el = document.createElement('a');
                         el.className = 'shortcut';
                         el.href = link.url;
-                        
-                        // Gebruik DuckDuckGo voor betere transparante iconen
-                        const iconSrc = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
-                        
                         el.innerHTML = `
                             <div class="icon-container">
                                 <img src="${iconSrc}" alt="">
@@ -185,7 +167,7 @@
                     container.appendChild(section);
                 }
             } catch (e) { 
-                console.error("Fout bij laden links.json:", e); 
+                console.error("Fout:", e); 
             }
         }
         loadLinks();
