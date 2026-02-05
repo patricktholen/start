@@ -62,14 +62,6 @@
         /* Category Layout */
         .container { width: 90%; max-width: 800px; }
         .category-section { margin-bottom: 30px; }
-        .category-title { 
-            font-size: 14px; 
-            font-weight: 500;
-            margin-bottom: 15px; 
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
 
         /* Icon Grid */
         .grid {
@@ -142,7 +134,6 @@
                 for (const [category, links] of Object.entries(data)) {
                     const section = document.createElement('div');
                     section.className = 'category-section';
-                    section.innerHTML = `<div class="category-title">${category}</div>`;
                     
                     const grid = document.createElement('div');
                     grid.className = 'grid';
