@@ -60,16 +60,26 @@
         }
 
         /* Category Layout */
-        .container { width: 95%; max-width: 1400px; }
-        .category-section { margin-bottom: 30px; }
+        .container {
+            width: 100%;
+            max-width: 1344px; /* Ruimte voor 12 iconen */
+            margin: 0 auto;    /* Cruciaal: dit zet de container in het midden */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Zorgt dat categorie-secties gecentreerd blijven */
+        }
+        .category-section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
         /* Icon Grid */
         .grid {
             display: grid;
-            /* Chrome uses a fixed width for the tiles to keep them close */
-            grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
-            gap: 0px; /* Reduced gap to bring them closer */
-            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 112px); /* Vaste breedte per icoon */
+            gap: 0px;
+            width: 100%;
+            justify-content: center; /* Dit centreert de iconen als de regel niet vol is */
         }
 
         .shortcut {
