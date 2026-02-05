@@ -62,24 +62,30 @@
         /* Category Layout */
         .container {
             width: 100%;
-            max-width: 1344px; /* Ruimte voor 12 iconen */
-            margin: 0 auto;    /* Cruciaal: dit zet de container in het midden */
+            /* Maximaal 12 iconen breed (12 * 112px) */
+            max-width: 1344px; 
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Zorgt dat categorie-secties gecentreerd blijven */
+            align-items: center;
         }
         .category-section {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            /* Zorg dat de sectie zelf ook centreert */
+            display: flex;
+            justify-content: center;
         }
 
         /* Icon Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, 112px); /* Vaste breedte per icoon */
+            /* Gebruik auto-fit in plaats van auto-fill */
+            grid-template-columns: repeat(auto-fit, 112px);
             gap: 0px;
+            /* Dit zorgt ervoor dat de hele grid in het midden van de container staat */
+            justify-content: center;
             width: 100%;
-            justify-content: center; /* Dit centreert de iconen als de regel niet vol is */
         }
 
         .shortcut {
