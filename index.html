@@ -110,11 +110,14 @@
         .icon-container {
             width: 48px;
             height: 48px;
+            /* Gebruik een transparante kleur die aanpast aan het thema */
+            background-color: var(--hover-color); 
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 12px;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .shortcut:hover .icon-container {
