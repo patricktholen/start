@@ -28,11 +28,29 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Google_Photos_icon_%282015-2020%29.svg/640px-Google_Photos_icon_%282015-2020%29.svg.png"
     },
     
-    { "name": "discord", "url": "https://discord.com/channels/@me"},
-    { "name": "linkedin", "url": "https://www.linkedin.com/jobs/"},
-    { "name": "garmin", "url": "https://connect.garmin.com/app/workouts"},
-    { "name": "youtube", "url": "https://youtube.com" },
-    { "name": "reddit", "url": "https://reddit.com" }
+    { 
+      "name": "discord",
+      "url":  "https://discord.com/channels/@me"
+    },
+    
+    { 
+      "name": "linkedin", 
+      "url": "https://www.linkedin.com/jobs/"
+    },
+    
+    { 
+      "name": "garmin", 
+      "url": "https://connect.garmin.com/app/workouts"
+    },
+    
+    { 
+      "name": "youtube", 
+      "url":  "https://youtube.com" 
+    },
+    
+    { 
+      "name": "reddit", 
+      "url":  "https://reddit.com" }
   ],
 
 
