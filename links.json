@@ -1,7 +1,13 @@
 {
   "Main": [
-    { "name": "outlook", "url": "https://outlook.live.com/mail/0/"},
-    { "name": "whatsapp", "url": "https://web.whatsapp.com/"},
+    { 
+      "name": "outlook", 
+      "url":  "https://outlook.live.com/mail/0/",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
+    }, 
+    { 
+      "name": "whatsapp", 
+      "url": "https://web.whatsapp.com/"},
     { "name": "klender", "url": "https://app.klender.nl/klender"},
     { "name": "drive", "url": "https://drive.google.com/drive/my-drive"},
     { "name": "foto's", "url": "https://photos.google.com/"},
