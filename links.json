@@ -1,16 +1,33 @@
 {
   "Main": [
+    
     { 
       "name": "outlook", 
       "url":  "https://outlook.live.com/mail/0/",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
     }, 
+    
     { 
       "name": "whatsapp", 
-      "url": "https://web.whatsapp.com/"},
-    { "name": "klender", "url": "https://app.klender.nl/klender"},
-    { "name": "drive", "url": "https://drive.google.com/drive/my-drive"},
-    { "name": "foto's", "url": "https://photos.google.com/"},
+      "url":  "https://web.whatsapp.com/",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
+    },
+    
+    { "name": "klender", 
+      "url":  "https://app.klender.nl/klender"
+    },
+    
+    { 
+      "name": "drive", 
+      "url":  "https://drive.google.com/drive/my-drive",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/640px-Google_Drive_icon_%282020%29.svg.png"
+    },
+
+    {
+      "name": "foto's", 
+      "url":  "https://photos.google.com/",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Google_Photos_icon_%282015-2020%29.svg/640px-Google_Photos_icon_%282015-2020%29.svg.png"
+    },
+    
     { "name": "discord", "url": "https://discord.com/channels/@me"},
     { "name": "linkedin", "url": "https://www.linkedin.com/jobs/"},
     { "name": "garmin", "url": "https://connect.garmin.com/app/workouts"},
