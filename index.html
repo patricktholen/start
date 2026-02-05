@@ -2,71 +2,167 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cloud Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
     <style>
-        :root { --bg: #202124; --text: #e8eaed; --accent: #8ab4f8; }
-        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px; }
-        
-        .search-bar { width: 500px; padding: 12px 24px; border-radius: 24px; border: 1px solid #5f6368; background: transparent; color: white; margin-bottom: 50px; outline: none; transition: 0.2s; }
-        .search-bar:focus { border-color: var(--accent); background: #303134; }
+        /* 1. Theme Variables (Google Colors) */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #202124;
+            --search-bg: #f1f3f4;
+            --icon-bg: #f1f3f4;
+            --hover-color: rgba(60, 64, 67, 0.1);
+            --accent: #1a73e8;
+        }
 
-        .container { width: 90%; max-width: 900px; }
-        .category-section { margin-bottom: 40px; }
-        .category-title { font-size: 18px; color: var(--accent); margin-bottom: 15px; border-bottom: 1px solid #3c4043; padding-bottom: 8px; }
+        /* 2. Automatic Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #202124;
+                --text-color: #e8eaed;
+                --search-bg: #303134;
+                --icon-bg: #3c4043;
+                --hover-color: rgba(255, 255, 255, 0.1);
+                --accent: #8ab4f8;
+            }
+        }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 15px; }
-        
-        .shortcut { text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; padding: 12px; border-radius: 8px; transition: 0.2s; }
-        .shortcut:hover { background: rgba(255,255,255,0.08); }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 20vh;
+            transition: background-color 0.3s ease;
+        }
 
-        .icon-wrapper { width: 48px; height: 48px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-        .icon-wrapper img { width: 28px; height: 28px; }
-        
-        .label { font-size: 12px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; }
+        /* Search Bar styling like Chrome */
+        .search-form {
+            width: 100%;
+            max-width: 584px;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 44px;
+            background: var(--search-bg);
+            border: 1px solid transparent;
+            border-radius: 24px;
+            padding: 0 20px;
+            font-size: 16px;
+            color: var(--text-color);
+            outline: none;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        }
+
+        /* Category Layout */
+        .container { width: 90%; max-width: 800px; }
+        .category-section { margin-bottom: 30px; }
+        .category-title { 
+            font-size: 14px; 
+            font-weight: 500;
+            margin-bottom: 15px; 
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Icon Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+            gap: 16px;
+        }
+
+        .shortcut {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 0;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .shortcut:hover {
+            background-color: var(--hover-color);
+        }
+
+        /* Round Icons - Chrome uses 48x48 */
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            background-color: var(--icon-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .icon-circle img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .label {
+            font-size: 12px;
+            width: 88px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
 
-    <form action="https://www.google.com/search" method="GET">
-        <input type="text" name="q" class="search-bar" placeholder="Search Google..." autocomplete="off">
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+        <input type="text" name="q" class="search-input" placeholder="Search Google..." autocomplete="off">
     </form>
 
     <div id="main-container" class="container"></div>
 
     <script>
         async function loadLinks() {
-            const response = await fetch('links.json');
-            const data = await response.json();
-            const container = document.getElementById('main-container');
+            try {
+                const response = await fetch('links.json');
+                const data = await response.json();
+                const container = document.getElementById('main-container');
 
-            for (const [category, links] of Object.entries(data)) {
-                // Create Category Section
-                const section = document.createElement('div');
-                section.className = 'category-section';
-                section.innerHTML = `<div class="category-title">${category}</div>`;
-                
-                const grid = document.createElement('div');
-                grid.className = 'grid';
+                for (const [category, links] of Object.entries(data)) {
+                    const section = document.createElement('div');
+                    section.className = 'category-section';
+                    section.innerHTML = `<div class="category-title">${category}</div>`;
+                    
+                    const grid = document.createElement('div');
+                    grid.className = 'grid';
 
-                links.forEach(link => {
-                    const domain = new URL(link.url).hostname;
-                    const el = document.createElement('a');
-                    el.className = 'shortcut';
-                    el.href = link.url;
-                    el.innerHTML = `
-                        <div class="icon-wrapper">
-                            <img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="">
-                        </div>
-                        <div class="label">${link.name}</div>
-                    `;
-                    grid.appendChild(el);
-                });
+                    links.forEach(link => {
+                        const domain = new URL(link.url).hostname;
+                        const el = document.createElement('a');
+                        el.className = 'shortcut';
+                        el.href = link.url;
+                        el.innerHTML = `
+                            <div class="icon-circle">
+                                <img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="">
+                            </div>
+                            <div class="label">${link.name}</div>
+                        `;
+                        grid.appendChild(el);
+                    });
 
-                section.appendChild(grid);
-                container.appendChild(section);
-            }
+                    section.appendChild(grid);
+                    container.appendChild(section);
+                }
+            } catch (e) { console.error("Could not load links.json", e); }
         }
-
         loadLinks();
     </script>
 </body>
