@@ -1,7 +1,8 @@
 {
   "Social": [
-    { "name": "YouTube", "url": "https://youtube.com" },
-    { "name": "Reddit", "url": "https://reddit.com" }
+    { "name": "youtube", "url": "https://youtube.com" },
+    { "name": "reddit", "url": "https://reddit.com" },
+    { "name": "drive", "url": "https://drive.google.com/drive/my-drive"}
   ],
   "Work": [
     { "name": "GitHub", "url": "https://github.com" },
