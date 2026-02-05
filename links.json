@@ -1,15 +1,15 @@
 {
   "Main": [
-    { "name": "youtube", "url": "https://youtube.com" },
-    { "name": "reddit", "url": "https://reddit.com" },
+    { "name": "outlook", "url": "https://outlook.live.com/mail/0/"},
+    { "name": "whatsapp", "url": "https://web.whatsapp.com/"},
+    { "name": "klender", "url": "https://app.klender.nl/klender"},
     { "name": "drive", "url": "https://drive.google.com/drive/my-drive"},
     { "name": "foto's", "url": "https://photos.google.com/"},
     { "name": "discord", "url": "https://discord.com/channels/@me"},
     { "name": "linkedin", "url": "https://www.linkedin.com/jobs/"},
-    { "name": "klender", "url": "https://app.klender.nl/klender"},
-    { "name": "whatsapp", "url": "https://web.whatsapp.com/"},
-    { "name": "outlook", "url": "https://outlook.live.com/mail/0/"},
-    { "name": "garmin", "url": "https://connect.garmin.com/app/workouts"}
+    { "name": "garmin", "url": "https://connect.garmin.com/app/workouts"},
+    { "name": "youtube", "url": "https://youtube.com" },
+    { "name": "reddit", "url": "https://reddit.com" }
   ],
 
 
