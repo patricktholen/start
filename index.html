@@ -107,9 +107,12 @@
         }
 
         .icon-container img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
+            /* Gebruik max in plaats van een vaste breedte */
+            max-width: 32px; 
+            max-height: 32px;
+            width: auto;
+            height: auto;
+            object-fit: contain; /* Zorgt dat het icoon altijd binnen de container blijft */
         }
 
         .label {
