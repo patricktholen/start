@@ -35,12 +35,12 @@
     
     { 
       "name": "linkedin", 
-      "url": "https://www.linkedin.com/jobs/"
+      "url":  "https://www.linkedin.com/jobs/"
     },
     
     { 
       "name": "garmin", 
-      "url": "https://connect.garmin.com/app/workouts"
+      "url":  "https://connect.garmin.com/app/workouts"
     },
     
     { 
