@@ -15,6 +15,10 @@
     { "name": "klender", 
       "url":  "https://app.klender.nl/klender"
     },
+
+    { "name": "ticktick", 
+      "url":  "https://ticktick.com/webapp"
+    },
     
     { 
       "name": "drive", 
