@@ -49,6 +49,12 @@
     },
     
     { 
+      "name": "udemy", 
+      "url":  "https://udemy.com",
+      "icon": "https://img.utdstc.com/icon/f61/db0/f61db034c2532bcef67713d4460207372054c4d2b92f271839544a47054b585e:200"
+    },
+
+    { 
       "name": "youtube", 
       "url":  "https://youtube.com" 
     },
