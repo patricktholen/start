@@ -7,7 +7,7 @@
     }, 
     
     { 
-      "name": "protonmail", 
+      "name": "protonmail",  
       "url":  "https://mail.proton.me/"
     }, 
 
@@ -72,6 +72,11 @@
     { 
       "name": "rompslomp", 
       "url":  "https://app.rompslomp.nl/" 
+    },
+
+    { 
+      "name": "clubznb", 
+      "url":  "https://clubnzb.com//" 
     }
   ],
 
