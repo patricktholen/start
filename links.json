@@ -7,6 +7,11 @@
     }, 
     
     { 
+      "name": "protonmail", 
+      "url":  "https://mail.proton.me/"
+    }, 
+
+    { 
       "name": "whatsapp", 
       "url":  "https://web.whatsapp.com/",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
