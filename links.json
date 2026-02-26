@@ -20,6 +20,11 @@
     { "name": "klender", 
       "url":  "https://app.klender.nl/klender"
     },
+
+    { "name": "ticktick", 
+      "url":  "https://ticktick.com/webapp",
+      "icon": "https://img.icons8.com/color/600/tick-tick.png"
+    },
     
     { 
       "name": "drive", 
@@ -48,6 +53,12 @@
       "url":  "https://connect.garmin.com/app/workouts"
     },
     
+    { 
+      "name": "udemy", 
+      "url":  "https://udemy.com",
+      "icon": "https://img.utdstc.com/icon/f61/db0/f61db034c2532bcef67713d4460207372054c4d2b92f271839544a47054b585e:200"
+    },
+
     { 
       "name": "youtube", 
       "url":  "https://youtube.com" 
