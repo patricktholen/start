@@ -75,12 +75,16 @@
     },
 
     { 
+      "name": "teamviewer", 
+      "url":  "https://web.teamviewer.com/devices/basic" 
+    },
+
+    { 
       "name": "clubznb", 
       "url":  "https://clubnzb.com//" 
     }
   ],
 
-    
   "Work": [
   ],
 
