@@ -65,6 +65,11 @@
     },
 
     { 
+      "name": "isc2", 
+      "url":  "https://learn.isc2.org/"
+    },
+
+    { 
       "name": "youtube", 
       "url":  "https://youtube.com" 
     },
