@@ -5,6 +5,11 @@
       "name": "outlook", 
       "url":  "https://outlook.live.com/mail/0/"
     }, 
+
+    { 
+      "name": "zoho",  
+      "url":  "https://mail.zoho.eu/zm/#mail/folder/inbox"
+    }, 
     
     { 
       "name": "protonmail",  
