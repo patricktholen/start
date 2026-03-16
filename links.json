@@ -13,7 +13,7 @@
 
     { 
       "name": "whatsapp", 
-      "url":  "https://web.whatsapp.com/",
+      "url":  "https://web.whatsapp.com/"
     },
     
     { "name": "klender", 
@@ -21,17 +21,17 @@
     },
 
     { "name": "to do", 
-      "url":  "https://to-do.live.com/tasks/all",
+      "url":  "https://to-do.live.com/tasks/all"
     },
     
     { 
       "name": "drive", 
-      "url":  "https://drive.google.com/drive/my-drive",
+      "url":  "https://drive.google.com/drive/my-drive"
     },
 
     {
       "name": "foto's", 
-      "url":  "https://photos.google.com/",
+      "url":  "https://photos.google.com/"
     },
     
     { 
