@@ -14,28 +14,24 @@
     { 
       "name": "whatsapp", 
       "url":  "https://web.whatsapp.com/",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
     },
     
     { "name": "klender", 
       "url":  "https://app.klender.nl/klender"
     },
 
-    { "name": "ticktick", 
-      "url":  "https://ticktick.com/webapp",
-      "icon": "https://img.icons8.com/color/600/tick-tick.png"
+    { "name": "to do", 
+      "url":  "https://to-do.live.com/tasks/all",
     },
     
     { 
       "name": "drive", 
       "url":  "https://drive.google.com/drive/my-drive",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/640px-Google_Drive_icon_%282020%29.svg.png"
     },
 
     {
       "name": "foto's", 
       "url":  "https://photos.google.com/",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Google_Photos_icon_%282015-2020%29.svg/640px-Google_Photos_icon_%282015-2020%29.svg.png"
     },
     
     { 
