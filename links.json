@@ -1,8 +1,13 @@
-{
+o{
   "Main": [
     
     { 
       "name": "outlook", 
+      "url":  "https://outlook.live.com/mail/0/"
+    }, 
+
+    { 
+      "name": "outlook 2", 
       "url":  "https://outlook.live.com/mail/0/"
     }, 
 
