@@ -7,11 +7,6 @@
     }, 
 
     { 
-      "name": "outlook 2", 
-      "url":  "https://outlook.live.com/mail/0/"
-    }, 
-
-    { 
       "name": "zoho",  
       "url":  "https://mail.zoho.eu/zm/#mail/folder/inbox"
     }, 
@@ -23,7 +18,8 @@
 
     { 
       "name": "whatsapp", 
-      "url":  "https://web.whatsapp.com/"
+      "url":  "https://web.whatsapp.com/",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/3840px-WhatsApp.svg.png"
     },
     
     { "name": "klender", 
@@ -36,12 +32,14 @@
     
     { 
       "name": "drive", 
-      "url":  "https://drive.google.com/drive/my-drive"
+      "url":  "https://drive.google.com/drive/my-drive",
+      "icon": "https://images.icon-icons.com/2642/PNG/512/google_drive_logo_icon_159334.png"
     },
 
     {
       "name": "foto's", 
-      "url":  "https://photos.google.com/"
+      "url":  "https://photos.google.com/",
+      "icon": "https://images.icon-icons.com/2642/PNG/512/google_photo_logo_icon_159338.png"
     },
     
     { 
