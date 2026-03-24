@@ -29,7 +29,15 @@
     { "name": "to do", 
       "url":  "https://to-do.live.com/tasks/all"
     },
+
+    { "name": "word", 
+      "url":  "word.cloud.microsoft"
+    },
     
+    { "name": "excel", 
+      "url":  "excel.cloud.microsoft"
+    },
+
     { 
       "name": "drive", 
       "url":  "https://drive.google.com/drive/my-drive",
