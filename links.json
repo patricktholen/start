@@ -31,11 +31,11 @@
     },
 
     { "name": "word", 
-      "url":  "word.cloud.microsoft"
+      "url":  "https://word.cloud.microsoft"
     },
     
     { "name": "excel", 
-      "url":  "excel.cloud.microsoft"
+      "url":  "https://excel.cloud.microsoft"
     },
 
     { 
