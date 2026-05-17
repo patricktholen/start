@@ -15,7 +15,10 @@
       "name": "protonmail",  
       "url":  "https://mail.proton.me/"
     }, 
-
+    { 
+      "name": "copilot",  
+      "url":  "https://copilot.microsoft.com/"
+    }, 
     { 
       "name": "whatsapp", 
       "url":  "https://web.whatsapp.com/",
