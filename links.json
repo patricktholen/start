@@ -80,11 +80,6 @@
     },
 
     { 
-      "name": "isc2", 
-      "url":  "https://isc2.obrizum.io/org/cc"
-    },
-
-    { 
       "name": "youtube", 
       "url":  "https://youtube.com" 
     },
